@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《師說》範文導讀｜漢華中學中國語文科</title>
+<style>
+
+:root{
+  --blue:#2563eb;--blue-dark:#1d4ed8;--blue-soft:#eff6ff;--blue-mid:#dbeafe;
+  --ink:#1f2937;--muted:#4b5563;--line:#e5e7eb;--card:#fff;--bg:#f4f6fb;
+  --ok:#16a34a;--ok-bg:#dcfce7;--bad:#dc2626;--bad-bg:#fee2e2;--warn:#b45309;--warn-bg:#fef3c7;
+  --radius:14px;--shadow:0 1px 4px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","PingFang HK","Microsoft JhengHei","Noto Sans CJK TC",sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.65}
+a{color:var(--blue)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;z-index:100;border-radius:8px}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(37,99,235,.06)}
+.topbar-inner{max-width:880px;margin:0 auto;padding:10px 14px 8px}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:6px}
+.brand .school{font-size:.85rem;color:var(--blue);font-weight:700;letter-spacing:.02em}
+.brand h1{margin:0;font-size:1.15rem;font-weight:800}
+.nav{display:flex;flex-wrap:wrap;gap:6px}
+.nav a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:6px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue-dark);text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid transparent}
+.nav a:hover,.nav a:focus{background:var(--blue);color:#fff;outline:none}
+main{max-width:880px;margin:0 auto;padding:16px 14px 80px}
+.sec{margin:22px 0 28px;scroll-margin-top:110px}
+.sec>h2{margin:0 0 12px;font-size:1.35rem;color:var(--blue-dark);padding-bottom:6px;border-bottom:3px solid var(--blue-mid)}
+.sec>h3,.card h3{margin:16px 0 8px;font-size:1.08rem}
+.card{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);margin:10px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}}
+.pill{display:inline-block;background:var(--blue-soft);color:var(--blue-dark);border-radius:999px;padding:2px 10px;font-size:.85rem;font-weight:700;margin-right:4px}
+.muted{color:var(--muted);font-size:.95rem}
+.person{border-left:4px solid var(--blue);padding-left:12px;margin:10px 0}
+.story{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fafbff}
+.story h4{margin:0 0 8px;color:var(--blue-dark)}
+.story dl{margin:0;display:grid;grid-template-columns:4.5em 1fr;gap:4px 8px}
+.story dt{font-weight:700;color:var(--muted)}.story dd{margin:0}
+.story .baihua{margin:10px 0 0;padding:10px 12px;background:#f0fdf4;border-left:4px solid #16a34a;border-radius:0 10px 10px 0;font-size:.95rem;line-height:1.65;color:#14532d}
+.story .baihua strong{color:#166534}
+.vocab{display:grid;gap:8px}
+.vocab-item{display:grid;grid-template-columns:minmax(7em,auto) 1fr;gap:8px 12px;padding:10px 12px;background:#fafbff;border-radius:10px;border:1px solid var(--line)}
+.vocab-item b{color:var(--blue-dark)}
+@media(max-width:560px){.vocab-item{grid-template-columns:1fr}}
+.struct ul{margin:6px 0;padding-left:1.2em}.struct li{margin:4px 0}
+.student-form{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:10px}
+@media(max-width:640px){.student-form{grid-template-columns:1fr}}
+label.field{display:block;font-weight:700;font-size:.92rem;margin-bottom:4px}
+input.field,select.field{width:100%;min-height:48px;padding:10px 12px;font:inherit;border:2px solid #d1d5db;border-radius:10px;background:#fff}
+input.field:focus,select.field:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.2)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.tabs button{flex:1;min-width:120px;min-height:48px;font:inherit;font-weight:700;border:2px solid var(--blue);border-radius:12px;background:#fff;color:var(--blue);cursor:pointer}
+.tabs button.active,.tabs button[aria-selected="true"]{background:var(--blue);color:#fff}
+.prog-row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.95rem;color:var(--muted);margin:8px 0 4px}
+.bar{height:10px;background:#e5e7eb;border-radius:6px;overflow:hidden}
+.bar>div{height:100%;background:var(--blue);width:0;transition:width .3s}
+.overall{background:var(--blue-soft);border:1px solid var(--blue-mid);border-radius:12px;padding:12px 14px;margin:12px 0}
+.opt{display:flex;align-items:flex-start;gap:10px;min-height:56px;padding:12px;margin:8px 0;border:2px solid #d1d5db;border-radius:12px;background:#fff;cursor:pointer;text-align:left}
+.opt input{width:22px;height:22px;margin-top:3px;flex:none}
+.opt.sel{border-color:var(--blue);background:var(--blue-soft)}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)}
+.opt.bad{border-color:var(--bad);background:var(--bad-bg)}
+.stem{font-size:1.08rem;font-weight:700;margin:0 0 10px}
+.fb{margin-top:12px;padding:12px;border-radius:10px}
+.fb.ok{background:var(--ok-bg)}.fb.bad{background:var(--bad-bg)}
+.btn{font:inherit;font-weight:700;min-height:52px;width:100%;margin-top:12px;border:0;border-radius:12px;background:var(--blue);color:#fff;cursor:pointer}
+.btn:disabled{background:#9ca3af;cursor:not-allowed}
+.btn.sec{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn.ok{background:var(--ok)}
+.btn.warn{background:#d97706}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:500px){.btn-row{grid-template-columns:1fr}}
+.big{font-size:1.8rem;font-weight:800;text-align:center;margin:8px 0}
+.rv{border-top:1px solid var(--line);padding:10px 0}.rv .t{font-weight:700}.c{color:#15803d}.w{color:#b91c1c}
+.note{background:var(--warn-bg);border-left:4px solid var(--warn);padding:10px 12px;border-radius:0 10px 10px 0;margin:10px 0;font-size:.95rem}
+.video-box{aspect-ratio:16/9;background:linear-gradient(135deg,#dbeafe,#eff6ff);border:2px dashed #93c5fd;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:20px;text-align:center;color:var(--muted)}
+.video-box iframe{width:100%;height:100%;border:0;border-radius:12px}
+.video-wrap{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.footer{max-width:880px;margin:0 auto;padding:8px 14px 28px;color:var(--muted);font-size:.88rem;text-align:center}
+[hidden]{display:none!important}
+@media print{
+  .topbar{position:static;box-shadow:none}
+  .nav,.btn,#quizPanel .btn,.student-form,input,select,.tabs{display:none!important}
+  body{background:#fff;font-size:14px}
+  .card,.story,.vocab-item{box-shadow:none;border:1px solid #ccc}
+  .sec{break-inside:avoid}
+}
+.classic{font-size:1.05rem;line-height:2;letter-spacing:.02em}
+.classic p{margin:0 0 1em}
+.classic h3{margin:18px 0 10px;font-size:1.1rem;color:var(--blue-dark);border-left:4px solid var(--blue);padding-left:10px}
+.classic .attr{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--muted);line-height:1.55}
+.yuyi{line-height:1.85}
+.yuyi p{margin:0 0 .95em}
+.yuyi h3{margin:18px 0 10px;font-size:1.1rem;color:var(--blue-dark);border-left:4px solid var(--blue);padding-left:10px}
+.sec-head-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:6px;border-bottom:3px solid var(--blue-mid)}
+.sec-head-row h2{margin:0;padding:0;border:0;font-size:1.35rem;color:var(--blue-dark)}
+.btn-toggle{font:inherit;font-weight:700;font-size:.88rem;min-height:40px;padding:6px 14px;border-radius:999px;border:2px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;width:auto;margin:0}
+.btn-toggle:hover,.btn-toggle:focus{background:var(--blue);color:#fff;outline:none}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳至正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="school">漢華中學中國語文科</span>
+      <h1>《師說》範文導讀</h1>
+    </div>
+    <nav class="nav" aria-label="章節導航">
+      <a href="#daodu">導讀</a>
+      <a href="#quanwen">全文</a>
+      <a href="#yuyi">語譯</a>
+      <a href="#zici">重點字詞</a>
+      <a href="#zhangfa">章法／論證</a>
+      <a href="#zice">自測</a>
+      <a href="#shipin">影片</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ========== 1 導讀 ========== -->
+<section class="sec" id="daodu">
+  <h2>一、導讀</h2>
+  <p class="muted">對象：中四至中六　｜　篇章：《師說》　｜　作者：韓愈（唐）　｜　出處：《昌黎先生集》</p>
+
+  <div class="card">
+    <h3>背景</h3>
+    <p>唐代中葉，士大夫多以從師為恥，師道衰落。韓愈提倡古文、復興儒道，作《師說》贈李蟠，批判時俗，闡明從師的意義與標準——屬<strong>議論說理</strong>的贈序文。</p>
+  </div>
+
+  <div class="card">
+    <h3>作者簡介</h3>
+    <div class="person"><span class="pill">作者</span><strong>韓愈</strong>（768–824），字退之，河南河陽人，世稱韓昌黎。倡導古文運動，與柳宗元並稱「韓柳」。本文為贈序，議論精警，筆鋒銳利。</div>
+  </div>
+
+  <div class="card">
+    <h3>記住三個關鍵</h3>
+    <div class="grid3" style="margin-top:10px">
+      <article class="story">
+        <h4>① 傳道受業解惑</h4>
+        <dl>
+          <dt>職責</dt><dd>師者，所以傳道、受業、解惑也。</dd>
+          <dt>標準</dt><dd>道之所存，師之所存也。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>老師的職責是傳授道理、教授學業、解釋疑惑。選擇老師只看誰先懂得道理，不論貴賤長幼——道理在哪裏，老師就在那裏。</p>
+      </article>
+      <article class="story">
+        <h4>② 三組對比</h4>
+        <dl>
+          <dt>一</dt><dd>聖人與眾人（從師 ↔ 恥師）。</dd>
+          <dt>二</dt><dd>擇師教子 ↔ 自身恥師。</dd>
+          <dt>三</dt><dd>百工不恥相師 ↔ 士大夫恥師。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>聖人尚且從師，眾人卻恥於從師；為子女請老師，自己卻不肯從師；工匠肯互相學習，士大夫卻嘲笑從師。三組對比層層揭露時俗之非。</p>
+      </article>
+      <article class="story">
+        <h4>③ 弟子不必不如師</h4>
+        <dl>
+          <dt>理</dt><dd>聞道有先後，術業有專攻。</dd>
+          <dt>結</dt><dd>末段嘉李蟠行古道，作說以貽。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>學生不一定不如老師，老師也不一定樣樣勝過學生；懂道理有早有晚，學問技藝各有專長。韓愈讚許李蟠不受時俗拘束、肯從師，便寫了這篇《師說》送給他。</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>溫習口訣</h3>
+    <p>傳道受業解惑明，道存即師存；聖人眾人比高下，教子恥自身；百工相師士恥笑，孔子無常師；弟子不必不如師，術業有專攻；嘉許李蟠行古道，師說以貽之。</p>
+  </div>
+</section>
+
+<!-- ========== 2 全文 ========== -->
+<section class="sec" id="quanwen">
+  <h2>二、全文</h2>
+  <p class="muted">韓愈《師說》　｜　文本依教育局「指定文言經典學習材料」參考版本</p>
+  <div class="card classic">
+    <h3>開宗明義</h3>
+    <p>古之學者必有師。師者，所以傳道、受業、解惑也。人非生而知之者，孰能無惑？惑而不從師，其為惑也終不解矣。</p>
+    <h3>從師標準</h3>
+    <p>生乎吾前，其聞道也，固先乎吾，吾從而師之；生乎吾後，其聞道也，亦先乎吾，吾從而師之。吾師道也，夫庸知其年之先後生於吾乎？是故無貴無賤，無長無少，道之所存，師之所存也。</p>
+    <h3>嗟歎師道</h3>
+    <p>嗟乎！師道之不傳也久矣！欲人之無惑也難矣！古之聖人，其出人也遠矣，猶且從師而問焉；今之眾人，其下聖人也亦遠矣，而恥學於師。是故聖益聖，愚益愚，聖人之所以為聖，愚人之所以為愚，其皆出於此乎！</p>
+    <h3>擇師教子</h3>
+    <p>愛其子，擇師而教之；於其身也，則恥師焉，惑矣！彼童子之師，授之書而習其句讀者，非吾所謂傳其道、解其惑者也。句讀之不知，惑之不解，或師焉，或不焉，小學而大遺，吾未見其明也。</p>
+    <h3>百工與士大夫</h3>
+    <p>巫、醫、樂師、百工之人，不恥相師；士大夫之族，曰師、曰弟子云者，則羣聚而笑之。問之，則曰︰「彼與彼年相若也，道相似也。」位卑則足羞，官盛則近諛。嗚呼！師道之不復，可知矣。巫、醫、樂師、百工之人，君子不齒，今其智乃反不能及，其可怪也歟！</p>
+    <h3>聖人無常師</h3>
+    <p>聖人無常師，孔子師郯子、萇弘、師襄、老聃。郯子之徒，其賢不及孔子。孔子曰︰「三人行，則必有我師。」是故弟子不必不如師，師不必賢於弟子；聞道有先後，術業有專攻，如是而已。</p>
+    <h3>作說緣起</h3>
+    <p>李氏子蟠，年十七，好古文，六藝經傳，皆通習之，不拘於時，學於余。余嘉其能行古道，作《師說》以貽之。</p>
+    <p class="attr">出處：韓愈《師說》（《昌黎先生集》）；文本依教育局「指定文言經典學習材料」參考版本（ks4_12_text.pdf）。註：以上僅就坊間所見資料，提供一個參考版本；教師亦可參考、使用其他版本。</p>
+  </div>
+</section>
+
+<!-- ========== 3 語譯 ========== -->
+<section class="sec" id="yuyi">
+  <div class="sec-head-row">
+    <h2>三、語譯</h2>
+    <button type="button" class="btn-toggle" id="yuyiToggle" aria-controls="yuyiBody" aria-expanded="true">隱藏語譯</button>
+  </div>
+  <div id="yuyiBody">
+  <p class="note">以下語譯供自學參考，考試請以課文原文為準。</p>
+  <div class="card yuyi">
+    <h3>開宗明義</h3>
+    <p>古代求學的人一定有老師。老師，是用來傳授道理、教授學業、解釋疑惑的人。人不是生下來就什麼都懂的，誰能沒有疑惑呢？有了疑惑卻不跟從老師學習，那疑惑終究不能解開。</p>
+    <h3>從師標準</h3>
+    <p>出生在我前面的人，他懂得道理本來就比我早，我跟從他、以他為師；出生在我後面的人，如果他懂得道理也比我早，我也跟從他、以他為師。我學的是道理，哪管他年紀比我大還是小呢？所以不論貴賤、不論長幼，道理存在的地方，就是老師存在的地方。</p>
+    <h3>嗟歎師道</h3>
+    <p>唉！從師求學的風氣失傳已經很久了！想要人們沒有疑惑也很難了！古代的聖人，才智遠遠超出一般人，尚且跟從老師請教；現在的一般人，才智遠低於聖人，卻以向老師學習為恥。所以聖人更加聖明，愚人更加愚昧。聖人之所以成為聖人、愚人之所以成為愚人，大概都是由於這個緣故吧！</p>
+    <h3>擇師教子</h3>
+    <p>疼愛自己的孩子，就選擇老師來教他；對於自己，卻以從師為恥，真是糊涂啊！那些教孩童的老師，只是教孩子識字、學習斷句，並不是我所說傳授道理、解釋疑惑的老師。斷句不懂得，就去請教老師；有疑惑解不開，卻不去請教——小的方面學習，大的方面反而放棄，我看不出這種人高明在哪裏。</p>
+    <h3>百工與士大夫</h3>
+    <p>巫師、醫生、樂師和各種工匠，不以互相學習為恥；士大夫這一類人，一聽到有人稱「老師」、稱「弟子」，就聚在一起嘲笑。問他們為甚麼，他們就說：「他跟他年紀差不多，懂得的道理也差不多。」以地位低的人為師就覺得可恥，以官位高的人為師又覺得近於諂媚。唉！從師的風氣不能恢復，由此可以知道了。巫師、醫生、樂師和工匠，君子不屑與他們並列；現在士大夫的智慧反而不及這些人，這不是很奇怪嗎！</p>
+    <h3>聖人無常師</h3>
+    <p>聖人沒有固定的老師。孔子曾向郯子、萇弘、師襄、老聃學習。郯子這些人，才德比不上孔子。孔子說：「三個人一起走，其中一定有可以做我老師的人。」所以學生不一定不如老師，老師不一定比學生賢能；懂得道理有先有後，學問技藝各有專長，不過如此罷了。</p>
+    <h3>作說緣起</h3>
+    <p>李家的孩子名叫蟠，十七歲，喜愛古文，六經的經文和傳文都普遍學習過，不受時俗拘束，跟我學習。我讚許他能實踐古人從師的道理，便寫了這篇《師說》送給他。</p>
+  </div>
+  </div>
+</section>
+
+<!-- ========== 4 重點字詞 ========== -->
+<section class="sec" id="zici">
+  <h2>四、重點字詞</h2>
+  <p class="muted">以下約十二組文言詞語／用法，宜連同課文語境記誦。</p>
+  <div class="card vocab">
+    <div class="vocab-item"><b>所以</b><span>用來……的。「師者，所以傳道、受業、解惑也」——老師是用來傳道、授業、解惑的人。</span></div>
+    <div class="vocab-item"><b>受業</b><span>傳授學業（「受」同「授」）。教育局文本作「受業」，勿擅改字。</span></div>
+    <div class="vocab-item"><b>從而師之</b><span>跟從他並以他為師（「師」為意動用法）。</span></div>
+    <div class="vocab-item"><b>庸知</b><span>哪管、豈用知道。「夫庸知其年之先後生於吾乎」——哪管他年紀比我大還是小呢？</span></div>
+    <div class="vocab-item"><b>無貴無賤</b><span>不論貴賤。「無」＝無論。與「無長無少」並列。</span></div>
+    <div class="vocab-item"><b>出人</b><span>超出一般人。「其出人也遠矣」——聖人遠超常人。</span></div>
+    <div class="vocab-item"><b>猶且</b><span>尚且。「猶且從師而問焉」——尚且跟從老師請教。</span></div>
+    <div class="vocab-item"><b>恥師</b><span>以從師為恥（「恥」為意動用法）。「則恥師焉，惑矣！」</span></div>
+    <div class="vocab-item"><b>句讀</b><span>文章的斷句（「讀」音「豆」）。「習其句讀」——學習斷句。</span></div>
+    <div class="vocab-item"><b>小學而大遺</b><span>小的方面學習，大的方面反而放棄。批評輕重倒置。</span></div>
+    <div class="vocab-item"><b>不齒</b><span>不屑與之並列、鄙視。「君子不齒」——士大夫看不起百工。</span></div>
+    <div class="vocab-item"><b>貽</b><span>贈送。「作《師說》以貽之」——寫了《師說》送給李蟠。</span></div>
+  </div>
+</section>
+
+<!-- ========== 5 章法／論證 ========== -->
+<section class="sec" id="zhangfa">
+  <h2>五、章法／論證</h2>
+  <div class="card struct">
+    <h3>1. 立論—批判—歸結，層次分明</h3>
+    <p>首段<strong>開門見山</strong>提出老師職責與從師標準；中間以<strong>三組對比</strong>批判時俗；再舉孔子<strong>無常師</strong>為例，歸結「弟子不必不如師」；末段交代緣起，以李蟠<strong>行古道</strong>收束。</p>
+    <h3>2. 主要論證手法</h3>
+    <ul>
+      <li><strong>開門見山</strong>：「古之學者必有師。師者，所以傳道、受業、解惑也。」破題立論。</li>
+      <li><strong>對比論證</strong>：聖人 ↔ 眾人；擇師教子 ↔ 自身恥師；百工相師 ↔ 士大夫恥師。</li>
+      <li><strong>舉例論證</strong>：孔子師郯子、萇弘、師襄、老聃，證明聖人無常師。</li>
+      <li><strong>引用論證</strong>：「三人行，則必有我師。」借聖言增強說服力。</li>
+      <li><strong>層次收束</strong>：「聞道有先後，術業有專攻，如是而已。」把前文收束到簡潔結論。</li>
+      <li><strong>感歎抒情</strong>：「嗟乎！」「嗚呼！」使議論帶有激情，感染力強。</li>
+    </ul>
+    <h3>3. 議論中帶感情</h3>
+    <p>多次感歎師道不傳、不復，既批判士大夫，亦寄復興師道之願；末段嘉許李蟠，正反映襯。</p>
+    <h3>4. 結構示意</h3>
+    <p>傳道受業解惑／道之所存 → 三組對比批判時俗 → 聖人無常師、弟子不必不如師 → 嘉李蟠行古道、作說以貽。</p>
+  </div>
+</section>
+
+<!-- ========== 6 自測 ========== -->
+<section class="sec" id="zice">
+  <h2>六、自測</h2>
+  <p class="muted">題目為校本自測（內容理解／字詞解釋／寫作手法各 20 題，合共 60 題）。可先作答；交卷前請填學生資料。</p>
+
+  <div class="card" id="studentCard">
+    <h3>學生資料（交卷必填）</h3>
+    <div class="student-form">
+      <div>
+        <label class="field" for="cls">班別</label>
+        <input class="field" id="cls" name="cls" placeholder="例：4A" maxlength="4" autocomplete="off" required>
+      </div>
+      <div>
+        <label class="field" for="sid">學號</label>
+        <input class="field" id="sid" name="sid" placeholder="例：01" maxlength="4" autocomplete="off" required>
+      </div>
+      <div>
+        <label class="field" for="sname">姓名</label>
+        <input class="field" id="sname" name="sname" placeholder="請輸入姓名" maxlength="20" autocomplete="name" required>
+      </div>
+    </div>
+    <p class="muted" style="margin:8px 0 0">班別可用如 4A、5C、6D；學號請填兩位數字（如 01）。</p>
+  </div>
+
+  <div class="overall" id="overallBox">
+    <div class="prog-row"><strong>整體進度</strong><span id="overallText">0 / 60 題　總分 0</span></div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="60" aria-valuenow="0" id="overallBar"><div id="overallFill"></div></div>
+    <div class="prog-row" style="margin-top:8px;font-size:.9rem">
+      <span>內容理解：<b id="scContent">0</b>/20</span>
+      <span>字詞解釋：<b id="scVocab">0</b>/20</span>
+      <span>寫作手法：<b id="scRhet">0</b>/20</span>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="練習部分">
+    <button type="button" role="tab" id="tab-content" aria-selected="true" aria-controls="panel-quiz" data-sec="content">內容理解（20）</button>
+    <button type="button" role="tab" id="tab-vocab" aria-selected="false" aria-controls="panel-quiz" data-sec="vocab">字詞解釋（20）</button>
+    <button type="button" role="tab" id="tab-rhet" aria-selected="false" aria-controls="panel-quiz" data-sec="rhetorical">寫作手法（20）</button>
+  </div>
+
+  <div class="card" id="panel-quiz" role="tabpanel">
+    <div class="prog-row"><span id="secProgText">第 1 / 20 題</span><span id="secScoreText">本節答對：0</span></div>
+    <div class="bar" id="secBar" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div id="secFill"></div></div>
+    <form id="qform" onsubmit="return false" style="margin-top:12px">
+      <fieldset style="border:0;margin:0;padding:0">
+        <legend class="stem" id="stem"></legend>
+        <div id="opts"></div>
+      </fieldset>
+      <div id="fb" class="fb" hidden></div>
+      <button type="button" class="btn" id="checkBtn" disabled>檢查答案</button>
+      <div class="btn-row">
+        <button type="button" class="btn sec" id="nextBtn" hidden>下一題</button>
+        <button type="button" class="btn ok" id="secDoneBtn" hidden>完成本節</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card" id="secResult" hidden>
+    <h3 id="secResultTitle">本節完成</h3>
+    <p class="big" id="secFinal"></p>
+    <p id="secFinalMsg" class="muted" style="text-align:center"></p>
+    <div class="btn-row">
+      <button type="button" class="btn sec" id="retrySecBtn">重做本節</button>
+      <button type="button" class="btn" id="goNextSecBtn">下一節</button>
+    </div>
+    <button type="button" class="btn warn" id="submitEarlyBtn" style="margin-top:10px" hidden>交卷（已完成全部）</button>
+    <h3>答題回顧</h3>
+    <div id="secReview"></div>
+  </div>
+
+  <div class="card" id="finalResult" hidden>
+    <h3>全部完成・交卷</h3>
+    <p class="big" id="finalScore"></p>
+    <p id="finalDetail" style="text-align:center"></p>
+    <p id="submitMsg" class="note" hidden></p>
+    <div class="btn-row">
+      <button type="button" class="btn ok" id="submitBtn">交卷至老師試算表</button>
+      <button type="button" class="btn sec" id="retryAllBtn">全部重做</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7 影片 ========== -->
+<section class="sec" id="shipin">
+  <h2>七、影片｜寶寶老師陪你快速溫範文</h2>
+  <div class="card">
+    <p><a id="videoTitleLink" href="#" target="_blank" rel="noopener">寶寶老師陪你快速溫範文｜第三集《師說》</a></p>
+    <div id="videoArea"></div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">漢華中學中國語文科　｜　《師說》範文導讀　｜　供課堂投影及學生自學</footer>
+
+<script>
+
+(function () {
+"use strict";
+
+/* ===== 老師設定（部署後請填寫） ===== */
+const GAS_WEBAPP_URL = '';
+const YOUTUBE_ID = 'GAboH1fbp_8';
+
+/* ===== 題庫：校本自測；o[0] 為正確答案 ===== */
+var Q_CONTENT = [{"s":"本文開首提出老師的職責是：","o":["傳道、受業、解惑","教授科舉考試技巧","替學生批改文章","管理學生日常起居"],"e":"「師者，所以傳道、受業、解惑也。」"},{"s":"「人非生而知之者，孰能無惑」的意思是：","o":["人不是生下來就什麼都懂，誰能沒有疑惑","人一生下來就什麼都懂，不會有疑惑","只有聖人才會有疑惑","疑惑是與生俱來、無法解決的"],"e":"說明人人都需要從師。"},{"s":"韓愈認為選擇老師的標準是：","o":["誰先懂得道理，就以誰為師","只向年紀比自己大的人學習","只向地位比自己高的人學習","只向與自己年齡相若的人學習"],"e":"「吾師道也，夫庸知其年之先後生於吾乎？」"},{"s":"「道之所存，師之所存也」的意思是：","o":["道理在哪裏，老師就在那裏","老師住的地方一定有道理","有地位的人才可以當老師","年紀大的人才配做老師"],"e":"全文核心觀念之一。"},{"s":"作者慨歎「師道之不傳也久矣」，主要批評：","o":["當時社會以從師為恥、師道衰落","學校數量不足","老師收費太高","學生讀書不認真"],"e":"第二段起轉入批判時俗。"},{"s":"文中「古之聖人」與「今之眾人」對比，說明：","o":["聖人尚且從師，眾人卻恥於從師，以致聖益聖、愚益愚","聖人不必從師，眾人更不必從師","聖人與眾人能力相同","今人比古人更聰明"],"e":"第一組對比論證。"},{"s":"「愛其子，擇師而教之；於其身也，則恥師焉」揭示的矛盾是：","o":["為子女擇師，自己卻恥於從師","疼愛子女卻不給子女請老師","自己愛從師卻不讓子女從師","父子都不肯從師"],"e":"第二組對比。"},{"s":"作者認為「童子之師」與他所說的「師」有何不同？","o":["童子之師只教句讀，未必傳道解惑","童子之師地位更高","童子之師專門解惑","兩者完全相同"],"e":"「授之書而習其句讀者，非吾所謂傳其道、解其惑者也。」"},{"s":"「小學而大遺」的意思是：","o":["小事肯學習，大事反而放棄","從小就好好學習，長大就遺棄學業","小學功課難，大學更容易","只學大道理，不理會小知識"],"e":"批評時人不知輕重。"},{"s":"文中以「巫、醫、樂師、百工之人」與「士大夫之族」對比，用意是：","o":["批評士大夫恥師，反而不及百工肯互相學習","讚揚士大夫不與百工來往","說明百工地位高於士大夫","主張人人都應改行做工匠"],"e":"第三組對比。"},{"s":"士大夫嘲笑別人從師，所持理由是：","o":["彼此年紀相若、道相似，不該相師","老師收費昂貴","從師會影響做官","古人沒有從師的習慣"],"e":"「彼與彼年相若也，道相似也。」"},{"s":"「位卑則足羞，官盛則近諛」反映士大夫：","o":["以地位論師，觀念錯誤","願意向任何地位的人學習","只向窮人學習","完全不在乎老師的官位"],"e":"指出恥師的勢利心態。"},{"s":"作者舉孔子師郯子、萇弘、師襄、老聃，目的是：","o":["證明聖人無常師，應虛心向有道者學習","證明孔子樣樣都勝過別人","說明這四人比孔子更偉大","記錄孔子的遊歷路線"],"e":"舉例論證。"},{"s":"「弟子不必不如師，師不必賢於弟子」的意思是：","o":["學生不一定不如老師，老師不一定處處勝過學生","學生永遠比不上老師","老師一定比學生賢能","師生能力完全相等，沒有分別"],"e":"打破絕對的師尊生卑觀念。"},{"s":"「聞道有先後，術業有專攻」強調：","o":["懂得道理有早有晚，學問技藝各有專長","老師一定樣樣精通","學生應專攻科舉","聞道遲早無關緊要"],"e":"解釋何以弟子與師可以互補。"},{"s":"韓愈寫《師說》的直接緣由是：","o":["嘉許李蟠能行古道、不拘於時而從師，作說以贈","反駁皇帝的政策","參加科舉考試","紀念自己的老師"],"e":"末段交代寫作緣起。"},{"s":"李蟠的特點是：","o":["好古文、通習六藝經傳、不拘於時而學於韓愈","只喜歡寫詩，不讀經傳","年齡很大才開始讀書","專門嘲笑從師的人"],"e":"「年十七，好古文……不拘於時，學於余。」"},{"s":"文中「古道」主要指：","o":["古人從師求學的風氣與道理","古代的交通道路","科舉考試的舊規","做官的潛規則"],"e":"「余嘉其能行古道」。"},{"s":"本文的中心論點最接近：","o":["人人皆應從師；道之所存，師之所存","只有聖人可以當老師","老師必須比學生年長","從師只為應付考試"],"e":"開篇立論，貫串全文。"},{"s":"韓愈寫作本文的主要用意是：","o":["批判當時恥於從師的風氣，倡導尊師重道","記述李蟠的生平事蹟","攻擊所有士大夫","推銷自己開館授徒"],"e":"借贈序議論，復興師道。"}];
+var Q_VOCAB = [{"s":"「師者，所以傳道、受業、解惑也」中「所以」的意思是：","o":["用來……的","所以、因此","所有","所在"],"e":"表憑藉、用途。"},{"s":"「受業」中「受」字的意思是：","o":["傳授（同「授」）","接受禮物","遭受","承受壓力"],"e":"教育局文本作「受業」，義同傳授學業。"},{"s":"「孰能無惑」中「孰」字的意思是：","o":["誰","熟練","仔細","哪個地方"],"e":"疑問代詞。"},{"s":"「生乎吾前」中「乎」字的意思是：","o":["於、在","嗎（語氣詞）","乎哉感歎","比較"],"e":"「生乎吾前」即生於我之前。"},{"s":"「固先乎吾」中「固」字的意思是：","o":["本來、固然","堅固","固執","固定"],"e":"本來就比我早聞道。"},{"s":"「吾從而師之」中「師」字的用法是：","o":["意動用法：以……為師","名詞：老師本人","動詞：出師打仗","形容詞：像老師一樣"],"e":"跟從他並尊他為師。"},{"s":"「夫庸知其年之先後生於吾乎」中「庸」字的意思是：","o":["哪、豈（反詰）","平庸","任用","需要"],"e":"哪管他年紀大小呢？"},{"s":"「無貴無賤」中「無」字的意思是：","o":["無論、不管","沒有","不要","無非"],"e":"不論貴賤。"},{"s":"「其出人也遠矣」中「出人」的意思是：","o":["超出一般人","走出人群","出生為人","出外訪友"],"e":"聖人遠超常人。"},{"s":"「猶且從師而問焉」中「猶且」的意思是：","o":["尚且","而且","猶如","即將"],"e":"尚且從師請教。"},{"s":"「而恥學於師」中「恥」字的用法是：","o":["意動用法：以……為恥","名詞：羞恥心","動詞：侮辱別人","形容詞：可恥的事"],"e":"以向老師學習為恥。"},{"s":"「聖益聖，愚益愚」中「益」字的意思是：","o":["更加","利益","有益","增加數量"],"e":"聖人更聖，愚人更愚。"},{"s":"「習其句讀」中「句讀」的意思是：","o":["文章的斷句（句號與逗頓）","朗誦聲調","作文題目","書籍目錄"],"e":"「讀」音「豆」。"},{"s":"「或師焉，或不焉」中「不」字的意思是：","o":["同「否」，指不從師","不是","沒有","不要"],"e":"有的從師，有的不從師。"},{"s":"「小學而大遺」中「遺」字的意思是：","o":["放棄、遺漏","遺留","贈送","遺失物品"],"e":"大事反而丟下不學。"},{"s":"「不恥相師」中「相師」的意思是：","o":["互相學習、彼此為師","互相認識","一起做老師","比賽誰是老師"],"e":"百工不以互相為師為恥。"},{"s":"「則羣聚而笑之」中「羣」字：","o":["同「群」，聚集眾人","軍隊","種群","君王"],"e":"教育局文本作「羣」。"},{"s":"「彼與彼年相若也」中「相若」的意思是：","o":["相近、差不多","互相喜歡","互相競爭","完全相反"],"e":"年紀相若。"},{"s":"「官盛則近諛」中「諛」字的意思是：","o":["諂媚、奉承","多餘","愉快","錯誤"],"e":"以高官為師顯得近於拍馬。"},{"s":"「君子不齒」中「不齒」的意思是：","o":["不屑與之並列、鄙視","不談牙齒","不記年齡","不加理睬亦可"],"e":"士大夫看不起百工。"}];
+var Q_RHET = [{"s":"本文開首「古之學者必有師。師者，所以傳道、受業、解惑也」屬於：","o":["開門見山，提出中心論點","設置懸念，遲遲不點題","倒敘，先寫結果","借景抒情"],"e":"首段即立論。"},{"s":"「生乎吾前……生乎吾後……」兩句主要運用了：","o":["對偶／對比，說明從師不論年長年少","誇張","擬人","設問"],"e":"結構對稱，突出「師道」。"},{"s":"「是故無貴無賤，無長無少，道之所存，師之所存也」的句式特點是：","o":["排比兼層遞收束，強調從師標準","單純敘事","反問到底","比喻連用"],"e":"由「無貴無賤」到「道之所存」，層層收束到中心。"},{"s":"「嗟乎！師道之不傳也久矣！」的作用是：","o":["感歎抒情，轉入批判時俗","描寫景物","交代時間地點","讚美當時學風"],"e":"議論中帶強烈感情。"},{"s":"文中「古之聖人」與「今之眾人」的寫法屬於：","o":["對比論證","比喻論證","引用論證","類比諷今（以宋喻唐）"],"e":"第一組對比。"},{"s":"「聖益聖，愚益愚」運用了：","o":["對偶兼對比，突出從師與否的不同後果","擬人","反問","誇張數字"],"e":"一聖一愚，對照鮮明。"},{"s":"「愛其子，擇師而教之；於其身也，則恥師焉」運用了：","o":["對比論證，揭露言行不一","比喻","引用","誇張"],"e":"第二組對比。"},{"s":"「句讀之不知，惑之不解，或師焉，或不焉」運用了：","o":["對比，小事從師、大事反而棄師","單純重複","擬人","抒情為主"],"e":"說明「小學而大遺」。"},{"s":"以「巫、醫、樂師、百工」對「士大夫之族」，屬於：","o":["對比論證","比喻論證","設問","象徵"],"e":"第三組對比。"},{"s":"士大夫「羣聚而笑之」後「問之，則曰……」的寫法作用是：","o":["以語言描寫揭露其錯誤觀念","純粹增加篇幅","歌頌士大夫","描寫宴會氣氛"],"e":"讓反面觀點現身說法。"},{"s":"「嗚呼！師道之不復，可知矣」與前文「嗟乎」相呼應，作用是：","o":["反覆感歎，強化批判語氣","轉換話題談別的事","總結全篇寫作緣起","描寫作者身體不適"],"e":"議論帶情，前後呼應。"},{"s":"舉孔子師郯子、萇弘、師襄、老聃，屬於：","o":["舉例論證","比喻論證","假設論證","類比北宋"],"e":"以聖人事蹟證明「聖人無常師」。"},{"s":"引用孔子「三人行，則必有我師」，屬於：","o":["引用論證，增強說服力","景物描寫","反問","誇張"],"e":"借聖人之言立論。"},{"s":"「弟子不必不如師，師不必賢於弟子」運用了：","o":["對偶，辯證說明師生關係","擬人","設問","抒情小詩"],"e":"兩句結構對稱。"},{"s":"「聞道有先後，術業有專攻，如是而已」在結構上的作用是：","o":["層次收束，歸結從師的道理","另起爐灶談科舉","描寫李蟠外貌","交代寫作時間"],"e":"把前文論點收束到簡潔結論。"},{"s":"末段寫李蟠「不拘於時，學於余」，與前文批判時俗的關係是：","o":["正反映襯，以李蟠作能行古道的實例","全無關係","重複前文論點而無新意","諷刺李蟠"],"e":"理論之後落到具體人物。"},{"s":"「余嘉其能行古道，作《師說》以貽之」點明：","o":["寫作緣起與贈序性質","文章是考試範文","作者要收學費","李蟠請他寫墓誌"],"e":"說明為何而作。"},{"s":"全文論證結構大致是：","o":["立論→批判時俗（三組對比）→舉聖為例→歸結論點並交代緣起","先敘事後寫景","只記游記見聞","以時間為序記一天生活"],"e":"議論文層次分明。"},{"s":"文中多次使用「嗟乎」「嗚呼」，主要效果是：","o":["加強感情色彩，使議論更有感染力","表示作者詞窮","純粹湊字數","描寫天氣"],"e":"韓文議論常帶激情。"},{"s":"本文最主要的論證手法組合是：","o":["開門見山＋對比論證＋舉例論證＋層次收束","只有比喻，別無他法","只靠數字統計","以對話小說推動情節"],"e":"符合課文重點章法。"}];
+
+var SECTIONS = {
+  content: { key: 'content', title: '內容理解', Q: Q_CONTENT },
+  vocab: { key: 'vocab', title: '字詞解釋', Q: Q_VOCAB },
+  rhetorical: { key: 'rhetorical', title: '寫作手法', Q: Q_RHET }
+};
+var SEC_ORDER = ['content', 'vocab', 'rhetorical'];
+var MAX_TOTAL = 60;
+
+function shuffle(a) {
+  a = a.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+function $(id) { return document.getElementById(id); }
+
+var state = {};
+SEC_ORDER.forEach(function (k) {
+  state[k] = { order: null, cur: 0, answers: [], finished: false, score: 0 };
+});
+var currentSec = 'content';
+
+function studentInfo() {
+  return {
+    class: ($('cls').value || '').trim().toUpperCase(),
+    studentId: ($('sid').value || '').trim(),
+    name: ($('sname').value || '').trim()
+  };
+}
+function requireStudent() {
+  var s = studentInfo();
+  if (!s.class || !s.studentId || !s.name) {
+    alert('請先填寫班別、學號、姓名，再開始或交卷。');
+    $('studentCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    $('cls').focus();
+    return null;
+  }
+  return s;
+}
+
+function prepareOrder(secKey) {
+  var Q = SECTIONS[secKey].Q;
+  return Q.map(function (q) {
+    return { s: q.s, e: q.e, ans: q.o[0], o: shuffle(q.o) };
+  });
+}
+
+function startSection(secKey, force) {
+  currentSec = secKey;
+  var st = state[secKey];
+  if (force || !st.order) {
+    st.order = prepareOrder(secKey);
+    st.cur = 0;
+    st.answers = [];
+    st.finished = false;
+    st.score = 0;
+  }
+  document.querySelectorAll('.tabs button').forEach(function (b) {
+    var on = b.getAttribute('data-sec') === secKey;
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+    b.classList.toggle('active', on);
+  });
+  $('finalResult').hidden = true;
+  if (st.finished) {
+    $('panel-quiz').hidden = true;
+    showSecResult(secKey);
+  } else {
+    $('secResult').hidden = true;
+    $('panel-quiz').hidden = false;
+    showQuestion();
+  }
+  updateOverall();
+}
+
+function setSecScore(secKey) {
+  var st = state[secKey];
+  var s = 0;
+  for (var i = 0; i < st.answers.length; i++) {
+    if (st.answers[i] && st.answers[i].ok) s++;
+  }
+  st.score = s;
+  return s;
+}
+
+function updateOverall() {
+  var done = 0, totalScore = 0;
+  SEC_ORDER.forEach(function (k) {
+    var st = state[k];
+    var answered = st.answers.filter(function (a) { return a; }).length;
+    done += answered;
+    totalScore += setSecScore(k);
+  });
+  $('overallFill').style.width = (done / MAX_TOTAL * 100) + '%';
+  $('overallBar').setAttribute('aria-valuenow', String(done));
+  $('overallText').textContent = done + ' / ' + MAX_TOTAL + ' 題　總分 ' + totalScore;
+  $('scContent').textContent = state.content.score;
+  $('scVocab').textContent = state.vocab.score;
+  $('scRhet').textContent = state.rhetorical.score;
+
+  var allDone = SEC_ORDER.every(function (k) { return state[k].finished; });
+  if (allDone) {
+    $('submitEarlyBtn').hidden = false;
+    showFinal();
+  }
+}
+
+function showQuestion() {
+  var st = state[currentSec];
+  var q = st.order[st.cur];
+  var N = st.order.length;
+  st._picked = null;
+  st._checked = false;
+  $('stem').textContent = (st.cur + 1) + '. ' + q.s;
+  var box = $('opts');
+  box.innerHTML = '';
+  q.o.forEach(function (t, i) {
+    var l = document.createElement('label');
+    l.className = 'opt';
+    var r = document.createElement('input');
+    r.type = 'radio'; r.name = 'opt'; r.value = String(i);
+    var sp = document.createElement('span');
+    sp.textContent = String.fromCharCode(65 + i) + '. ' + t;
+    l.appendChild(r); l.appendChild(sp);
+    r.addEventListener('change', function () {
+      if (st._checked) return;
+      st._picked = i;
+      Array.prototype.forEach.call(box.children, function (c) { c.classList.remove('sel'); });
+      l.classList.add('sel');
+      $('checkBtn').disabled = false;
+    });
+    box.appendChild(l);
+  });
+  $('fb').hidden = true;
+  $('checkBtn').hidden = false;
+  $('checkBtn').disabled = true;
+  $('nextBtn').hidden = true;
+  $('secDoneBtn').hidden = true;
+  var answered = st.answers.filter(function (a) { return a; }).length;
+  $('secFill').style.width = (answered / N * 100) + '%';
+  $('secBar').setAttribute('aria-valuenow', String(answered));
+  $('secProgText').textContent = '第 ' + (st.cur + 1) + ' / ' + N + ' 題';
+  $('secScoreText').textContent = '本節答對：' + st.score;
+}
+
+function checkAnswer() {
+  var st = state[currentSec];
+  if (st._checked || st._picked === null) return;
+  st._checked = true;
+  $('checkBtn').disabled = true;
+  var q = st.order[st.cur];
+  var ok = q.o[st._picked] === q.ans;
+  st.answers[st.cur] = { ok: ok, pick: q.o[st._picked], ans: q.ans, idx: st.cur };
+  var labs = $('opts').children;
+  for (var i = 0; i < labs.length; i++) {
+    labs[i].querySelector('input').disabled = true;
+    if (q.o[i] === q.ans) labs[i].classList.add('ok');
+    else if (i === st._picked) labs[i].classList.add('bad');
+  }
+  var fb = $('fb');
+  fb.hidden = false;
+  fb.className = 'fb ' + (ok ? 'ok' : 'bad');
+  fb.textContent = (ok ? '✔ 答對了！' : '✘ 答錯了。正確答案：' + q.ans) + '　解說：' + q.e;
+  setSecScore(currentSec);
+  updateOverall();
+  $('secScoreText').textContent = '本節答對：' + st.score;
+  var answered = st.answers.filter(function (a) { return a; }).length;
+  var N = st.order.length;
+  $('secFill').style.width = (answered / N * 100) + '%';
+  $('checkBtn').hidden = true;
+  if (st.cur < N - 1) $('nextBtn').hidden = false;
+  else $('secDoneBtn').hidden = false;
+}
+
+function nextQuestion() {
+  var st = state[currentSec];
+  if (!st._checked) return;
+  if (st.cur < st.order.length - 1) {
+    st.cur++;
+    showQuestion();
+  }
+}
+
+function finishSection() {
+  var st = state[currentSec];
+  if (!st._checked) return;
+  st.finished = true;
+  setSecScore(currentSec);
+  updateOverall();
+  showSecResult(currentSec);
+  saveDraft();
+  if (SEC_ORDER.every(function (k) { return state[k].finished; })) {
+    showFinal();
+  }
+}
+
+function showSecResult(secKey) {
+  var st = state[secKey];
+  var N = SECTIONS[secKey].Q.length;
+  $('panel-quiz').hidden = true;
+  $('secResult').hidden = false;
+  $('secResultTitle').textContent = SECTIONS[secKey].title + '・本節完成';
+  $('secFinal').textContent = '得分：' + st.score + ' / ' + N;
+  var p = st.score / N;
+  $('secFinalMsg').textContent = p >= 0.8 ? '表現出色，繼續保持！' : p >= 0.5 ? '不錯，請重溫答錯的題目。' : '請細閱課文及解說，再試一次。';
+  var rv = $('secReview');
+  rv.innerHTML = '';
+  st.order.forEach(function (q, i) {
+    var a = st.answers[i];
+    if (!a) return;
+    var d = document.createElement('div');
+    d.className = 'rv';
+    var t = document.createElement('div');
+    t.className = 't';
+    t.textContent = (i + 1) + '. ' + q.s;
+    var r = document.createElement('div');
+    r.className = a.ok ? 'c' : 'w';
+    r.textContent = (a.ok ? '✔ 你的答案：' : '✘ 你的答案：') + a.pick + (a.ok ? '' : '｜正確答案：' + q.ans);
+    var e = document.createElement('div');
+    e.textContent = '解說：' + q.e;
+    d.appendChild(t); d.appendChild(r); d.appendChild(e);
+    rv.appendChild(d);
+  });
+  var idx = SEC_ORDER.indexOf(secKey);
+  var nextKey = idx < SEC_ORDER.length - 1 ? SEC_ORDER[idx + 1] : null;
+  $('goNextSecBtn').hidden = !nextKey;
+  $('goNextSecBtn').textContent = nextKey ? '前往「' + SECTIONS[nextKey].title + '」' : '';
+  $('goNextSecBtn').onclick = nextKey ? function () {
+    startSection(nextKey, false);
+    $('zice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } : null;
+  $('submitEarlyBtn').hidden = !SEC_ORDER.every(function (k) { return state[k].finished; });
+}
+
+function wrongSummary() {
+  var parts = [];
+  SEC_ORDER.forEach(function (k) {
+    var st = state[k];
+    var wrong = [];
+    st.answers.forEach(function (a, i) {
+      if (a && !a.ok) wrong.push(i + 1);
+    });
+    if (wrong.length) parts.push(SECTIONS[k].title + '錯題:' + wrong.join(','));
+  });
+  return parts.join('；') || '全對';
+}
+
+function buildPayload(stu) {
+  var sc = state.content.score;
+  var sv = state.vocab.score;
+  var sr = state.rhetorical.score;
+  var total = sc + sv + sr;
+  return {
+    timestamp: new Date().toISOString(),
+    class: stu.class,
+    studentId: stu.studentId,
+    name: stu.name,
+    scoreContent: sc,
+    scoreVocab: sv,
+    scoreRhetorical: sr,
+    scoreTotal: total,
+    maxTotal: MAX_TOTAL,
+    percent: Math.round(total / MAX_TOTAL * 1000) / 10,
+    answersSummary: wrongSummary(),
+    userAgent: navigator.userAgent || ''
+  };
+}
+
+function showFinal() {
+  if (!SEC_ORDER.every(function (k) { return state[k].finished; })) return;
+  $('finalResult').hidden = false;
+  var total = state.content.score + state.vocab.score + state.rhetorical.score;
+  $('finalScore').textContent = '總分：' + total + ' / ' + MAX_TOTAL;
+  $('finalDetail').innerHTML =
+    '內容理解 ' + state.content.score + '/20　｜　字詞解釋 ' + state.vocab.score +
+    '/20　｜　寫作手法 ' + state.rhetorical.score + '/20<br>正確率 ' +
+    (Math.round(total / MAX_TOTAL * 1000) / 10) + '%';
+  saveDraft();
+}
+
+function saveDraft() {
+  try {
+    var stu = studentInfo();
+    var draft = {
+      student: stu,
+      scores: {
+        content: state.content.score,
+        vocab: state.vocab.score,
+        rhetorical: state.rhetorical.score
+      },
+      finished: SEC_ORDER.map(function (k) { return { k: k, done: state[k].finished, score: state[k].score }; }),
+      summary: wrongSummary(),
+      savedAt: new Date().toISOString()
+    };
+    localStorage.setItem('shishuo_daodu_draft', JSON.stringify(draft));
+  } catch (e) {}
+}
+
+function submitToSheet() {
+  var stu = requireStudent();
+  if (!stu) return;
+  if (!SEC_ORDER.every(function (k) { return state[k].finished; })) {
+    alert('請先完成三個部分的全部題目，再交卷。');
+    return;
+  }
+  var payload = buildPayload(stu);
+  saveDraft();
+  var msg = $('submitMsg');
+  msg.hidden = false;
+
+  if (!GAS_WEBAPP_URL) {
+    msg.textContent = '⚠ 尚未設定 GAS_WEBAPP_URL，成績只保存在本機（localStorage 草稿），未能上傳老師試算表。請老師在 HTML 腳本頂部貼上 Apps Script 網頁應用程式網址。';
+    return;
+  }
+  msg.textContent = '正在上傳成績…';
+  $('submitBtn').disabled = true;
+  fetch(GAS_WEBAPP_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  }).then(function () {
+    msg.textContent = '✔ 已送出交卷請求。若老師試算表「交卷紀錄」出現新列，即表示成功。';
+    $('submitBtn').disabled = false;
+  }).catch(function () {
+    msg.textContent = '✘ 上傳失敗，請檢查網絡後再試。本機草稿已保存。';
+    $('submitBtn').disabled = false;
+  });
+}
+
+var yuyiToggle = $('yuyiToggle');
+var yuyiBody = $('yuyiBody');
+if (yuyiToggle && yuyiBody) {
+  yuyiToggle.addEventListener('click', function () {
+    var hide = !yuyiBody.hidden;
+    yuyiBody.hidden = hide;
+    yuyiToggle.setAttribute('aria-expanded', hide ? 'false' : 'true');
+    yuyiToggle.textContent = hide ? '顯示語譯' : '隱藏語譯';
+  });
+}
+
+function renderVideo() {
+  var area = $('videoArea');
+  var link = $('videoTitleLink');
+  if (YOUTUBE_ID) {
+    link.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(YOUTUBE_ID);
+    area.innerHTML = '<div class="video-wrap"><iframe src="https://www.youtube.com/embed/' +
+      encodeURIComponent(YOUTUBE_ID) + '" title="寶寶老師陪你快速溫範文｜第三集《師說》" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+  } else {
+    link.href = '#shipin';
+    link.removeAttribute('target');
+    area.innerHTML = '<div class="video-box"><strong>影片尚未設定</strong><span>請老師在腳本頂部填寫 <code>const YOUTUBE_ID = "……";</code></span><span>標題：寶寶老師陪你快速溫範文｜第三集《師說》</span></div>';
+  }
+}
+
+document.querySelectorAll('.tabs button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    startSection(b.getAttribute('data-sec'), false);
+  });
+});
+$('checkBtn').addEventListener('click', checkAnswer);
+$('nextBtn').addEventListener('click', nextQuestion);
+$('secDoneBtn').addEventListener('click', finishSection);
+$('retrySecBtn').addEventListener('click', function () {
+  startSection(currentSec, true);
+  $('zice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+$('submitBtn').addEventListener('click', submitToSheet);
+$('submitEarlyBtn').addEventListener('click', function () {
+  showFinal();
+  $('finalResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+$('retryAllBtn').addEventListener('click', function () {
+  if (!confirm('確定全部重做？目前得分將重置。')) return;
+  SEC_ORDER.forEach(function (k) {
+    state[k] = { order: null, cur: 0, answers: [], finished: false, score: 0 };
+  });
+  $('finalResult').hidden = true;
+  startSection('content', true);
+  updateOverall();
+});
+
+try {
+  var d = localStorage.getItem('shishuo_daodu_draft');
+  if (d) {
+    var draft = JSON.parse(d);
+    if (draft.student) {
+      if (draft.student.class) $('cls').value = draft.student.class;
+      if (draft.student.studentId) $('sid').value = draft.student.studentId;
+      if (draft.student.name) $('sname').value = draft.student.name;
+    }
+  }
+} catch (e) {}
+
+renderVideo();
+updateOverall();
+startSection('content', false);
+
+})();
+
+</script>
+</body>
+</html>
